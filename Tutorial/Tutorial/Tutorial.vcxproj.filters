@@ -21,5 +21,25 @@
     <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Renderer\Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Renderer\Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\vertexShader.shader" />
+    <None Include="res\shaders\fragmentShader.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\textures\container.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\textures\smiley.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

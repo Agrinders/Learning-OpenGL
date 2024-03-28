@@ -78,13 +78,13 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)vendor\GLFW\include;$(SolutionDir)vendor\Glad\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)vendor\GLFW\include;$(SolutionDir)vendor\Glad\include;$(SolutionDir)vendor\stb_image\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)vendor\GLFW\lib;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)versions\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)vendor\GLFW\include;$(SolutionDir)vendor\Glad\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)vendor\GLFW\include;$(SolutionDir)vendor\Glad\include;$(SolutionDir)vendor\stb_image\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)vendor\GLFW\lib;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)versions\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
@@ -149,6 +149,18 @@
   <ItemGroup>
     <ClCompile Include="..\vendor\Glad\src\glad.c" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Renderer\Shader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Renderer\Shader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\fragmentShader.shader" />
+    <None Include="res\shaders\vertexShader.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\textures\container.jpg" />
+    <Image Include="res\textures\smiley.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
