@@ -5,7 +5,6 @@
 
 //Event Callbacks(Resize, Inputs)
 //If We Only Resize The GLFWwindow, We Also Need To Resize The Render Viewport
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
 	glViewport(0, 0, width, height);
 }
